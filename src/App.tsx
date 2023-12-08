@@ -2,6 +2,8 @@ import './app.css';
 import {useEffect, useState} from 'react';
 import getYOffset from './lib/getYOffset.ts';
 import useValueTransition from './hooks/useValueTransition.ts';
+import TowerImg from '/img/tower.png'
+import DollarImg from '/img/dollar.png'
 
 const API_URL = 'https://api.bluelytics.com.ar/v2/latest';
 
@@ -23,9 +25,9 @@ export default function App() {
 
     <main>
       <div className='container'>
-        <img className='tower' src='src/assets/img/tower.png' alt='Descripción de la imagen'/>
+        <img className='tower' src={TowerImg} alt='Descripción de la imagen'/>
         <div className='dollar' style={{bottom: `${animatedTranslateValue}%`}}>
-          <img alt='1 dollar' src='/src/assets/img/dollar.png'/>
+          <img alt='1 dollar' src={DollarImg}/>
           <p>
             {animatedPriceValue.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'})}
           </p>
