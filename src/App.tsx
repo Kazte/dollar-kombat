@@ -17,7 +17,7 @@ export default function App() {
       .then(res => res.json())
       .then(resData => {
         console.log(resData);
-        setPrice(resData.blue.value_avg);
+        setPrice(resData.blue.value_sell);
       });
   }, []);
 
