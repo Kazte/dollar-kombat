@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    position: relative;
+}
+
+.tower {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.dollar {
+    position: absolute;
+    bottom: 50%;
+    left: -65px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dollar > p {
+    background-color: black;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        width: 50%;
+    }
+
+    .dollar > img {
+        width: 10%;
+    }
+}
